@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vehicle MPG estimation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Vehicle MPG estimation">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Vehicle MPG estimation</h1>
+    <h2>A simple estimator using mtcars dataset and linear modeling</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why Is Fuel Economy Important?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Saves You Money</li>
+<li>Reduces Climate Change</li>
+<li>Reduces Oil Dependence Costs</li>
+<li>Increases Energy Sustainability<br></li>
+</ol>
+
+<p>List taken from: <a href="http://www.fueleconomy.gov/feg/why.shtml">http://www.fueleconomy.gov/feg/why.shtml</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Estimation of Vehicle MPG</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We have developed a tool to estimate the expected miles per gallon of a vehicle given its weight and displacement.
+These factors were chosen based on step-wise creation of a linear model from the data supplied in the <code>mtcars</code> dataset in R. Loess smoothed lines and 95% confidence intervals are displayed on plots of weight vs mpg and displacement vs mpg to help you set your parameters. Values that produce a dot outside of the interval are not mpg estimates that are modeled well by this program.  </p>
+
+<p><img src="./mpg-estimator-screen-shot.png" alt="Screenshot of MPG estimator"
+     style="height:350px;display:block;margin-left:auto;margin-right:auto"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Use cases</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Consumers evaluating different engine options</li>
+<li>Vehicle manufacturers evaluating new car designs</li>
+<li>Regulatory bodies looking to create or modify legislation</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Simple example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>We want to evaluate the mpg difference between two 3000 lb cars. One with a 130 cu.in. engine, and a second with a 230 cu.in. engine. By simply setting the weight value to 3000 lbs, you can step through the different displacement values, seeing how the change in displacement maps against mpg, and also noting the output mpg value. Below we show screenshots of the initial and final states of the app under this example.</p>
+
+<p><img src="./initial-state.png" alt="Screenshot of MPG estimator"
+     style="height:350px;display:inline-block;margin-left:auto;margin-right:auto;text-align:center;">
+<img src="./final-state.png" alt="Screenshot of MPG estimator"
+     style="height:350px;display:inline-block;margin-left:auto;margin-right:auto;text-align:center;"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Why Is Fuel Economy Important?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Estimation of Vehicle MPG'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Use cases'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Simple example'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

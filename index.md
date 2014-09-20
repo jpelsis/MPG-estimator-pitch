@@ -1,0 +1,49 @@
+---
+title       : Vehicle MPG estimation
+subtitle    : A simple estimator using mtcars dataset and linear modeling
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Why Is Fuel Economy Important?
+
+1. Saves You Money
+2. Reduces Climate Change
+3. Reduces Oil Dependence Costs
+4. Increases Energy Sustainability  
+  
+List taken from: http://www.fueleconomy.gov/feg/why.shtml
+
+--- .class #id 
+
+## Estimation of Vehicle MPG
+
+We have developed a tool to estimate the expected miles per gallon of a vehicle given its weight and displacement.
+These factors were chosen based on step-wise creation of a linear model from the data supplied in the `mtcars` dataset in R. Loess smoothed lines and 95% confidence intervals are displayed on plots of weight vs mpg and displacement vs mpg to help you set your parameters. Values that produce a dot outside of the interval are not mpg estimates that are modeled well by this program.  
+  
+![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1.png) 
+
+--- .class #id 
+
+## Use cases
+
+1. Consumers evaluating different engine options
+2. Vehicle manufacturers evaluating new car designs
+3. Regulatory bodies looking to create or modify legislation
+
+--- .class #id 
+
+## Simple example
+
+We want to evaluate the mpg difference between two 3000 lb cars. One with a 130 cu.in. engine, and a second with a 230 cu.in. engine. By simply setting the weight value to 3000 lbs, you can step through the different displacement values, seeing how the change in displacement maps against mpg, and also noting the output mpg value. Below we show screenshots of the initial and final states of the app under this example.
+
+<img src="./initial-state.png" alt="Screenshot of MPG estimator"
+     style="height:350px;display:inline-block;margin-left:auto;margin-right:auto;text-align:center;">
+<img src="./final-state.png" alt="Screenshot of MPG estimator"
+     style="height:350px;display:inline-block;margin-left:auto;margin-right:auto;text-align:center;">
